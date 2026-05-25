@@ -27,8 +27,8 @@ function Header() {
     },
   ];
   return (
-    <div className="bg-[linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url('/header.jpg')] h-screen w-full bg-no-repeat bg-cover bg-center flex items-center justify-center flex-col">
-      <div className="flex items-center justify-center flex-col gap-10 w-[90%] lg:w-225">
+    <div className="bg-[linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url('/header.jpg')] h-full py-50 w-full bg-no-repeat bg-cover bg-center flex items-center justify-center flex-col">
+      <div className="flex items-center hover:text-white justify-center flex-col gap-10 w-[90%] lg:w-225">
         <div className="flex items-center justify-center flex-col gap-3">
           {/* Heading */}
           <h1 className="text-3xl md:text-7xl font-bold text-white text-center">
