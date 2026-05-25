@@ -11,4 +11,5 @@ export interface ButtonProps {
   icon?: JSX.Element;
   underline?: string;
   color?: string;
+  display?: string;
 }

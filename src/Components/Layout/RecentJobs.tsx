@@ -1,9 +1,10 @@
 import Button from "@/Components/Ui/Button";
 import Heading from "../Ui/Heading";
+import JobCard from "./JobCard";
 
 function RecentJobs() {
   return (
-    <div className="w-full h-full py-16">
+    <div className="w-full h-full py-16 flex items-center justify-center flex-col gap-16">
       {/* Heading */}
       <div className="w-full px-18 flex items-center justify-between">
         <Heading
@@ -17,7 +18,11 @@ function RecentJobs() {
           underline="underline"
           color="text-primary"
           content="View all"
+          display="hidden lg:flex"
         />
+      </div>
+      <div className="w-full px-18">
+        <JobCard />
       </div>
     </div>
   );

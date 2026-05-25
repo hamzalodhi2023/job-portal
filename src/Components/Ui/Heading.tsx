@@ -3,7 +3,7 @@ function Heading({ heading, subHeading, align }: HeadingProps) {
   return (
     <div className="w-full">
       <h2
-        className={`text-black text-[50px] font-bold ${align ? align : "text-center"} pb-10`}
+        className={`text-black text-[28px] md:text-[50px] font-bold ${align ? align : "text-center"} pb-10`}
       >
         {heading}
       </h2>
