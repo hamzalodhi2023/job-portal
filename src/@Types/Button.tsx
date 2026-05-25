@@ -9,4 +9,6 @@ export interface ButtonProps {
   padding?: string;
   rounded?: string;
   icon?: JSX.Element;
+  underline?: string;
+  color?: string;
 }
