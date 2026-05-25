@@ -27,22 +27,22 @@ function Navbar() {
           className="absolute top-2 right-2 text-2xl md:hidden text-black cursor-pointer"
         />
 
-        <li className="text-black py-2 w-full text-left md:text-white px-4 cursor-pointer transition-all duration-200 hover:translate-x-2 hover:bg-zinc-300 md:hover:translate-x-0 md:hover:bg-transparent">
+        <li className="text-black py-2 w-full text-left md:text-white px-4 cursor-pointer transition-all duration-200 hover:translate-x-2 hover:bg-primary hover:text-white md:hover:translate-x-0 md:hover:bg-transparent">
           Home
         </li>
-        <li className="text-black py-2 w-full text-left md:text-white px-4 cursor-pointer transition-all duration-200 hover:translate-x-2 hover:bg-zinc-300 md:hover:translate-x-0 md:hover:bg-transparent">
+        <li className="text-black py-2 w-full text-left md:text-white px-4 cursor-pointer transition-all duration-200 hover:translate-x-2 hover:bg-primary hover:text-white md:hover:translate-x-0 md:hover:bg-transparent">
           Jobs
         </li>
-        <li className="text-black py-2 w-full text-left md:text-white px-4 cursor-pointer transition-all duration-200 hover:translate-x-2 hover:bg-zinc-300 md:hover:translate-x-0 md:hover:bg-transparent">
+        <li className="text-black py-2 w-full text-left md:text-white px-4 cursor-pointer transition-all duration-200 hover:translate-x-2 hover:bg-primary hover:text-white md:hover:translate-x-0 md:hover:bg-transparent">
           About
         </li>
-        <li className="text-black py-2 w-full text-left md:text-white px-4 cursor-pointer transition-all duration-200 hover:translate-x-2 hover:bg-zinc-300 md:hover:translate-x-0 md:hover:bg-transparent">
+        <li className="text-black py-2 w-full text-left md:text-white px-4 cursor-pointer transition-all duration-200 hover:translate-x-2 hover:bg-primary hover:text-white md:hover:translate-x-0 md:hover:bg-transparent">
           Contact
         </li>
-        <li className="text-black py-2 w-full md:hidden text-left md:text-white px-4 cursor-pointer transition-all duration-200 hover:translate-x-2 hover:bg-zinc-300 md:hover:translate-x-0 md:hover:bg-transparent">
+        <li className="text-black py-2 w-full md:hidden text-left md:text-white px-4 cursor-pointer transition-all duration-200 hover:translate-x-2 hover:bg-primary hover:text-white md:hover:translate-x-0 md:hover:bg-transparent">
           Login
         </li>
-        <li className="text-black py-2 w-full md:hidden text-left md:text-white px-4 cursor-pointer transition-all duration-200 hover:translate-x-2 hover:bg-zinc-300 md:hover:translate-x-0 md:hover:bg-transparent">
+        <li className="text-black py-2 w-full md:hidden text-left md:text-white px-4 cursor-pointer transition-all duration-200 hover:translate-x-2 hover:bg-primary hover:text-white md:hover:translate-x-0 md:hover:bg-transparent">
           Register
         </li>
       </ul>
