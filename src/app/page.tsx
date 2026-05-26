@@ -1,7 +1,7 @@
 import Navbar from "@/Components/Layout/Navbar";
 import Header from "@/Components/Layout/Header";
 import RecentJobs from "@/Components/Layout/RecentJobs";
-import Button from "@/Components/Ui/Button";
+import BrowseCategory from "@/Components/Layout/BrowseCategory";
 
 function page() {
   return (
@@ -9,6 +9,7 @@ function page() {
       <Navbar />
       <Header />
       <RecentJobs />
+      <BrowseCategory />
     </div>
   );
 }

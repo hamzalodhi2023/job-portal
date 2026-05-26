@@ -2,7 +2,7 @@ import Button from "@/Components/Ui/Button";
 import Heading from "@/Components/Ui/Heading";
 import JobCard from "./JobCard";
 import JOB_DATA from "@/Data/Job";
-import { JobDataProps, JobCardProps } from "@/@Types/Job";
+import { JobDataProps } from "@/@Types/Job";
 
 function RecentJobs() {
   return (
@@ -23,7 +23,7 @@ function RecentJobs() {
           display="hidden lg:flex"
         />
       </div>
-      <div className="w-full lg:px-18 px-5">
+      <div className="w-full lg:px-18 px-5 flex items-center justify-center flex-col gap-6">
         {JOB_DATA.map((item: JobDataProps, index: number) => (
           <JobCard data={item} key={index} />
         ))}

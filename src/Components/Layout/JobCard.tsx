@@ -6,11 +6,11 @@ import {
   LuMapPin,
 } from "react-icons/lu";
 import Button from "../Ui/Button";
-import { JobDataProps, JobCardProps } from "@/@Types/Job";
+import { JobCardProps } from "@/@Types/Job";
 
 function JobCard({ data }: JobCardProps) {
   return (
-    <div className="py-10 lg:px-10 px-5 w-full flex items-center justify-center flex-col gap-10 shadow-[0_3px_8px_0_rgba(48,150,137,0.08)]">
+    <div className="py-10 lg:px-10 px-5 w-full flex items-center justify-center flex-col gap-10 shadow-[0_3px_10px_0_rgba(48,150,137,0.2)]">
       {/* time and save */}
       <div className=" flex items-center justify-between w-full">
         <p className="text-primary p-2 bg-[#3096891a] rounded-lg text-[16px] font-normal]">
