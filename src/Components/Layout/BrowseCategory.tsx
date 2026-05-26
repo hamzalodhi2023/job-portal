@@ -10,7 +10,7 @@ function BrowseCategory() {
         heading="Browse by Category"
         subHeading="At eu lobortis pretium tincidunt amet lacus ut a..."
       />
-      <div className="w-full flex items-center justify-center flex-col gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
         {BROWSE_CATEGORY.map((item: BrowseCategoryProps, index: number) => (
           <CategoryCards key={index} data={item} />
         ))}
