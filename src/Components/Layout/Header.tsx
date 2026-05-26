@@ -1,5 +1,5 @@
 import Button from "../Ui/Button";
-import HeaderCount from "../Ui/HeaderCount";
+import HeaderCount from "./HeaderCount";
 import {
   LuSearch,
   LuBriefcaseBusiness,

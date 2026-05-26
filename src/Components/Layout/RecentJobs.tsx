@@ -1,6 +1,8 @@
 import Button from "@/Components/Ui/Button";
-import Heading from "../Ui/Heading";
+import Heading from "@/Components/Ui/Heading";
 import JobCard from "./JobCard";
+import JOB_DATA from "@/Data/Job";
+import { JobDataProps, JobCardProps } from "@/@Types/Job";
 
 function RecentJobs() {
   return (
@@ -21,8 +23,10 @@ function RecentJobs() {
           display="hidden lg:flex"
         />
       </div>
-      <div className="w-full px-18">
-        <JobCard />
+      <div className="w-full lg:px-18 px-5">
+        {JOB_DATA.map((item: JobDataProps, index: number) => (
+          <JobCard data={item} key={index} />
+        ))}
       </div>
     </div>
   );
