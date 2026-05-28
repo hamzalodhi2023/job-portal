@@ -1,4 +1,3 @@
-import { PiPlantThin } from "react-icons/pi";
 const BROWSE_CATEGORY = [
   {
     icon: (
