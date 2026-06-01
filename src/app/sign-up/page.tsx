@@ -22,7 +22,7 @@ function Page() {
               Already have account?
               <Button
                 bg={false}
-                content="Log in"
+                content="Login"
                 color="text-primary"
                 underline="underline"
                 link="/login"
