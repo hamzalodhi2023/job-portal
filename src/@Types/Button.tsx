@@ -1,7 +1,7 @@
 import { JSX } from "react";
 
 export interface ButtonProps {
-  link: string;
+  link?: string;
   bg: boolean;
   content: string;
   width?: string;
