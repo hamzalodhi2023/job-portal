@@ -14,11 +14,12 @@ function Navbar() {
       <ul
         className={`${
           showHam ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
-        }   transition-all duration-300 ease-in-out
+        } transition-all duration-300 ease-in-out
   absolute md:static md:flex-row md:translate-y-0 md:opacity-100
   md:bg-transparent bg-white text-black left-0 top-0
-  w-full flex-col flex items-center justify-evenly
-  md:w-[50%] text-[15px] md:py-3 pt-10 overflow-hidden`}
+  w-full flex-col flex items-center md:justify-center
+  md:gap-8
+  md:w-auto text-[15px] md:py-3 pt-10 overflow-hidden`}
       >
         <LuX
           onClick={() => {
