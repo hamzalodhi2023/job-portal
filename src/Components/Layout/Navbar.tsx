@@ -2,6 +2,7 @@
 import { LuBriefcaseBusiness, LuX, LuAlignRight } from "react-icons/lu";
 import Button from "../Ui/Button";
 import { useState } from "react";
+import Link from "next/link";
 
 function Navbar() {
   const [showHam, setShowHam] = useState(false);
@@ -40,16 +41,27 @@ function Navbar() {
         <li className="text-black py-2 w-full text-left md:text-white px-4 cursor-pointer transition-all duration-200 hover:translate-x-2 hover:bg-primary hover:text-white md:hover:translate-x-0 md:hover:bg-transparent">
           Contact
         </li>
-        <li className="text-black py-2 w-full md:hidden text-left md:text-white px-4 cursor-pointer transition-all duration-200 hover:translate-x-2 hover:bg-primary hover:text-white md:hover:translate-x-0 md:hover:bg-transparent">
-          Login
+        <li className="w-full md:hidden">
+          <Link
+            href="/login"
+            className="block w-full py-2 px-4 text-black hover:bg-primary hover:text-white transition-all duration-200"
+          >
+            Login
+          </Link>
         </li>
-        <li className="text-black py-2 w-full md:hidden text-left md:text-white px-4 cursor-pointer transition-all duration-200 hover:translate-x-2 hover:bg-primary hover:text-white md:hover:translate-x-0 md:hover:bg-transparent">
-          Register
+
+        <li className="w-full md:hidden">
+          <Link
+            href="/sign-up"
+            className="block w-full py-2 px-4 text-black hover:bg-primary hover:text-white transition-all duration-200"
+          >
+            Register
+          </Link>
         </li>
       </ul>
       <div className="hidden md:flex items-center justify-center gap-2">
-        <Button link={"/"} bg={false} content={"Login"} />
-        <Button link={"/"} bg={true} content={"Register"} />
+        <Button link={"/login"} bg={false} content={"Login"} />
+        <Button link={"/sign-up"} bg={true} content={"Register"} />
       </div>
       <LuAlignRight
         onClick={() => {
