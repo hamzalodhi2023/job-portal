@@ -40,7 +40,7 @@ function Page() {
             <Button
               bg={true}
               content="Forgot Password"
-              link="/reset-password"
+              link="/"
               width="w-full"
             />
           </form>
