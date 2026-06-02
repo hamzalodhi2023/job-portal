@@ -3,9 +3,25 @@
 import { useState } from "react";
 import Button from "@/Components/Ui/Button";
 import { LuEye, LuEyeOff } from "react-icons/lu";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { LoginSchema, LoginFormData } from "@/Validation/Login";
 
 function Page() {
   const [showPassword, setShowPassword] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<LoginFormData>({
+    resolver: zodResolver(LoginSchema),
+    mode: "onSubmit",
+  });
+
+  const onSubmit: SubmitHandler<LoginFormData> = (data) => {
+    console.log(data);
+  };
 
   return (
     <div className="w-full h-screen flex">
@@ -31,32 +47,53 @@ function Page() {
           </div>
 
           {/* FORM */}
-          <form className="flex flex-col gap-4">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="flex flex-col gap-4"
+          >
             {/* Email */}
-            <input
-              type="email"
-              placeholder="Email address"
-              className="border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-primary text-white lg:text-black placeholder:text-gray-500"
-            />
-
-            {/* Password */}
-            <div className="flex items-center border border-gray-300 rounded-lg px-4 py-3 focus-within:border-primary">
+            <div>
               <input
-                type={showPassword ? "text" : "password"}
-                placeholder="Password"
-                className="w-full outline-none text-white lg:text-black placeholder:text-gray-500"
+                type="email"
+                placeholder="Email address"
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-primary text-white lg:text-black placeholder:text-gray-500"
+                {...register("email")}
               />
 
-              {showPassword ? (
-                <LuEyeOff
-                  className="text-gray-500 cursor-pointer text-xl"
-                  onClick={() => setShowPassword(false)}
+              {errors.email && (
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.email.message}
+                </p>
+              )}
+            </div>
+
+            {/* Password */}
+            <div>
+              <div className="flex items-center border border-gray-300 rounded-lg px-4 py-3 focus-within:border-primary">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Password"
+                  className="w-full outline-none text-white lg:text-black placeholder:text-gray-500"
+                  {...register("password")}
                 />
-              ) : (
-                <LuEye
-                  className="text-gray-500 cursor-pointer text-xl"
-                  onClick={() => setShowPassword(true)}
-                />
+
+                {showPassword ? (
+                  <LuEyeOff
+                    className="text-gray-500 cursor-pointer text-xl"
+                    onClick={() => setShowPassword(false)}
+                  />
+                ) : (
+                  <LuEye
+                    className="text-gray-500 cursor-pointer text-xl"
+                    onClick={() => setShowPassword(true)}
+                  />
+                )}
+              </div>
+
+              {errors.password && (
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.password.message}
+                </p>
               )}
             </div>
 
@@ -72,8 +109,8 @@ function Page() {
               />
             </div>
 
-            {/* Submit */}
-            <Button bg={true} content="Sign In" link="/" width="w-full" />
+            {/* Submit Button */}
+            <Button bg={true} content="Sign In" width="w-full" />
           </form>
         </div>
       </div>
