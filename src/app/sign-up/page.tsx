@@ -10,7 +10,6 @@ import { RegisterSchema, RegisterFormData } from "@/Validation/Register";
 function Page() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConformPassword, setShowConformPassword] = useState(false);
-
   const {
     register,
     handleSubmit,
@@ -19,7 +18,6 @@ function Page() {
     resolver: zodResolver(RegisterSchema),
     mode: "onSubmit",
   });
-
   const onSubmit: SubmitHandler<RegisterFormData> = (data) => {
     console.log(data);
   };
@@ -46,7 +44,6 @@ function Page() {
               />
             </p>
           </div>
-
           {/* FORM */}
           <form
             onSubmit={handleSubmit(onSubmit)}
@@ -60,7 +57,6 @@ function Page() {
                 {...register("fullName")}
                 className="border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-primary text-white lg:text-black placeholder:text-gray-500 w-full"
               />
-
               {errors.fullName && (
                 <p className="text-red-500 text-sm mt-1">
                   {errors.fullName.message}
@@ -75,7 +71,6 @@ function Page() {
                 {...register("username")}
                 className="border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-primary text-white lg:text-black placeholder:text-gray-500 w-full"
               />
-
               {errors.username && (
                 <p className="text-red-500 text-sm mt-1">
                   {errors.username.message}
@@ -90,14 +85,12 @@ function Page() {
                 {...register("email")}
                 className="border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-primary text-white lg:text-black placeholder:text-gray-500 w-full"
               />
-
               {errors.email && (
                 <p className="text-red-500 text-sm mt-1">
                   {errors.email.message}
                 </p>
               )}
             </div>
-
             {/* Password */}
             <div>
               <div className="flex items-center border border-gray-300 rounded-lg px-4 py-3 focus-within:border-primary">
@@ -107,7 +100,6 @@ function Page() {
                   {...register("password")}
                   className="w-full outline-none text-white lg:text-black placeholder:text-gray-500"
                 />
-
                 {showPassword ? (
                   <LuEyeOff
                     className="text-gray-500 cursor-pointer text-xl"
@@ -120,7 +112,6 @@ function Page() {
                   />
                 )}
               </div>
-
               {errors.password && (
                 <p className="text-red-500 text-sm mt-1">
                   {errors.password.message}
@@ -136,7 +127,6 @@ function Page() {
                   {...register("confirmPassword")}
                   className="w-full outline-none text-white lg:text-black placeholder:text-gray-500"
                 />
-
                 {showConformPassword ? (
                   <LuEyeOff
                     className="text-gray-500 cursor-pointer text-xl"
@@ -149,7 +139,6 @@ function Page() {
                   />
                 )}
               </div>
-
               {errors.confirmPassword && (
                 <p className="text-red-500 text-sm mt-1">
                   {errors.confirmPassword.message}
@@ -161,7 +150,6 @@ function Page() {
           </form>
         </div>
       </div>
-
       {/* RIGHT IMAGE */}
       <div className="w-1/2 hidden h-full bg-[linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url('/auth.jpg')] bg-cover bg-center lg:flex items-center justify-center px-10">
         <h1 className="text-white font-semibold text-4xl leading-tight text-center">
