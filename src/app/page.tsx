@@ -3,6 +3,7 @@ import Header from "@/Components/Layout/Header";
 import RecentJobs from "@/Components/Layout/RecentJobs";
 import BrowseCategory from "@/Components/Layout/BrowseCategory";
 import Info from "@/Components/Layout/Info";
+import Testimonials from "../Components/Layout/Testimonials";
 
 function page() {
   return (
@@ -12,6 +13,7 @@ function page() {
       <RecentJobs />
       <BrowseCategory />
       <Info />
+      <Testimonials />
     </div>
   );
 }
