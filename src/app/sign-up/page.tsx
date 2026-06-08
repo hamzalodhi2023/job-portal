@@ -16,7 +16,8 @@ function Page() {
     formState: { errors },
   } = useForm<RegisterFormData>({
     resolver: zodResolver(RegisterSchema),
-    mode: "onSubmit",
+    mode: "onChange",
+    reValidateMode: "onChange",
   });
   const onSubmit: SubmitHandler<RegisterFormData> = (data) => {
     console.log(data);

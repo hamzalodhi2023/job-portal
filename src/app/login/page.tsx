@@ -16,7 +16,8 @@ function Page() {
     formState: { errors },
   } = useForm<LoginFormData>({
     resolver: zodResolver(LoginSchema),
-    mode: "onSubmit",
+    mode: "onChange",
+    reValidateMode: "onChange",
   });
 
   const onSubmit: SubmitHandler<LoginFormData> = (data) => {
