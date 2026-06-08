@@ -29,17 +29,40 @@ function Navbar() {
           className="absolute top-2 right-2 text-2xl md:hidden text-black cursor-pointer"
         />
 
-        <li className="text-black py-2 w-full text-left md:text-white px-4 cursor-pointer transition-all duration-200 hover:translate-x-2 hover:bg-primary hover:text-white md:hover:translate-x-0 md:hover:bg-transparent">
-          Home
+        <li className="w-full">
+          <Link
+            href="/"
+            className="block w-full text-black py-2 px-4 md:text-white hover:bg-primary hover:text-white md:hover:bg-transparent transition-all duration-200"
+          >
+            Home
+          </Link>
         </li>
-        <li className="text-black py-2 w-full text-left md:text-white px-4 cursor-pointer transition-all duration-200 hover:translate-x-2 hover:bg-primary hover:text-white md:hover:translate-x-0 md:hover:bg-transparent">
-          Jobs
+
+        <li className="w-full">
+          <Link
+            href="/"
+            className="block w-full text-black py-2 px-4 md:text-white hover:bg-primary hover:text-white md:hover:bg-transparent transition-all duration-200"
+          >
+            Jobs
+          </Link>
         </li>
-        <li className="text-black py-2 w-full text-left md:text-white px-4 cursor-pointer transition-all duration-200 hover:translate-x-2 hover:bg-primary hover:text-white md:hover:translate-x-0 md:hover:bg-transparent">
-          About
+
+        <li className="w-full">
+          <Link
+            href="/"
+            className="block w-full text-black py-2 px-4 md:text-white hover:bg-primary hover:text-white md:hover:bg-transparent transition-all duration-200"
+          >
+            About
+          </Link>
         </li>
-        <li className="text-black py-2 w-full text-left md:text-white px-4 cursor-pointer transition-all duration-200 hover:translate-x-2 hover:bg-primary hover:text-white md:hover:translate-x-0 md:hover:bg-transparent">
-          Contact
+
+        <li className="w-full">
+          <Link
+            href="/contact"
+            className="block w-full text-black py-2 px-4 md:text-white hover:bg-primary hover:text-white md:hover:bg-transparent transition-all duration-200"
+          >
+            Contact
+          </Link>
         </li>
         <li className="w-full md:hidden">
           <Link

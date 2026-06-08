@@ -6,4 +6,6 @@ export interface HeadingProps {
   subHeadingSize?: string;
   headingWeight?: string;
   subHeadingWeight?: string;
+  headingColor?:string;
+  subHeadingColor?:string;
 }
