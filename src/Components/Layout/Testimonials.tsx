@@ -8,7 +8,7 @@ function Testimonials() {
         heading="Testimonials from Our Cuctomers"
         subHeading="At eu lobortis pretium tincidunt amet lacus ut aenean aliquet. Blandit a massa elementum id"
       />
-      <div className="w-full p-5 flex items-center justify-center flex-col gap-5 lg:flex-row lg:flex-wrap">
+      <div className="w-full p-5 lg flex items-center justify-center flex-col gap-5 lg:flex-row lg:flex-wrap">
         <TestimonialsCards />
         <TestimonialsCards />
       </div>

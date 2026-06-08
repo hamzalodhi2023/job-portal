@@ -4,6 +4,7 @@ import RecentJobs from "@/Components/Layout/RecentJobs";
 import BrowseCategory from "@/Components/Layout/BrowseCategory";
 import Info from "@/Components/Layout/Info";
 import Testimonials from "../Components/Layout/Testimonials";
+import Footer from "@/Components/Layout/Footer";
 
 function page() {
   return (
@@ -14,6 +15,7 @@ function page() {
       <BrowseCategory />
       <Info />
       <Testimonials />
+      <Footer />
     </div>
   );
 }
