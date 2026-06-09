@@ -49,7 +49,7 @@ function Navbar() {
 
         <li className="w-full">
           <Link
-            href="/"
+            href="/about"
             className="block w-full text-black py-2 px-4 md:text-white hover:bg-primary hover:text-white md:hover:bg-transparent transition-all duration-200"
           >
             About
