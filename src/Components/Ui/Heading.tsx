@@ -8,7 +8,7 @@ function Heading({
   headingWeight,
   subHeadingWeight,
   headingColor,
-  subHeadingColor
+  subHeadingColor,
 }: HeadingProps) {
   return (
     <div className="w-full">
